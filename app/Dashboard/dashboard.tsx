@@ -62,55 +62,63 @@ export default function Dashboard() {
             >
                 {/* Tank Level Card */}
                 <View style={styles.card}>
-                    <Text style={styles.cardTitle}>Tank Level</Text>
-                    <View style={styles.tankRow}>
-                        {/* Tank Illustration */}
-                        <View style={styles.tankIllustration}>
-                            <View style={styles.tankBody}>
-                                <View style={styles.tankEmpty} />
-                                <View style={[styles.tankWater, { flex: tankPercent }]} />
+                    {/* <Text style={styles.cardTitle}>Tank Level</Text> */}
+                    <TouchableOpacity
+                        style={styles.card}
+                        activeOpacity={0.85}
+                        onPress={() => router.push("/Dashboard/graph" as any)}
+                    >
+                        <Text style={styles.cardTitle}>Tank Level</Text>
+                        <View style={styles.tankRow}>
+                            {/* Tank Illustration */}
+                            <View style={styles.tankIllustration}>
+                                <View style={styles.tankBody}>
+                                    <View style={styles.tankEmpty} />
+                                    <View style={[styles.tankWater, { flex: tankPercent }]} />
+                                </View>
+                                <View style={styles.tankPipe} />
+                                <View style={styles.tankStandRow}>
+                                    {[0, 1, 2, 3].map((i) => (
+                                        <View key={i} style={styles.tankLeg} />
+                                    ))}
+                                </View>
+                                <View style={styles.tankBase} />
                             </View>
-                            <View style={styles.tankPipe} />
-                            <View style={styles.tankStandRow}>
-                                {[0, 1, 2, 3].map((i) => (
-                                    <View key={i} style={styles.tankLeg} />
-                                ))}
-                            </View>
-                            <View style={styles.tankBase} />
-                        </View>
 
-                        {/* Tank Info */}
-                        <View style={styles.tankInfo}>
-                            <Text style={styles.tankPercent}>
-                                <Text style={styles.tankPercentNum}>{tankPercent}</Text>
-                                <Text style={styles.tankPercentSym}>%</Text>
-                            </Text>
-                            <Text style={styles.tankFilledLabel}>Filled</Text>
-                            <Text style={styles.tankLiters}>
-                                {tankCurrent.toLocaleString()} / {tankTotal.toLocaleString()} L
-                            </Text>
-                            {/* Progress Bar */}
-                            <View style={styles.progressTrack}>
-                                <View
-                                    style={[
-                                        styles.progressFill,
-                                        { width: `${tankPercent}%` },
-                                    ]}
-                                />
-                            </View>
-                            <View style={styles.dividerLine} />
-                            <View style={styles.statusRow}>
-                                <View style={styles.statusCheck}>
-                                    <Text style={styles.statusCheckIcon}>✓</Text>
+                            {/* Tank Info */}
+                            <View style={styles.tankInfo}>
+                                <Text style={styles.tankPercent}>
+                                    <Text style={styles.tankPercentNum}>{tankPercent}</Text>
+                                    <Text style={styles.tankPercentSym}>%</Text>
+                                </Text>
+                                <Text style={styles.tankFilledLabel}>Filled</Text>
+                                <Text style={styles.tankLiters}>
+                                    {tankCurrent.toLocaleString()} / {tankTotal.toLocaleString()} L
+                                </Text>
+                                {/* Progress Bar */}
+                                <View style={styles.progressTrack}>
+                                    <View
+                                        style={[
+                                            styles.progressFill,
+                                            { width: `${tankPercent}%` },
+                                        ]}
+                                    />
                                 </View>
-                                <View>
-                                    <Text style={styles.statusNormal}>Normal</Text>
-                                    <Text style={styles.statusDesc}>Everything is working fine.</Text>
+                                <View style={styles.dividerLine} />
+                                <View style={styles.statusRow}>
+                                    <View style={styles.statusCheck}>
+                                        <Text style={styles.statusCheckIcon}>✓</Text>
+                                    </View>
+                                    <View>
+                                        <Text style={styles.statusNormal}>Normal</Text>
+                                        <Text style={styles.statusDesc}>Everything is working fine.</Text>
+                                    </View>
                                 </View>
                             </View>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </View>
+
 
                 {/* Motor Control Card */}
                 <View style={styles.card}>
@@ -161,22 +169,34 @@ export default function Dashboard() {
                             <Text style={styles.statIconEmoji}>💧</Text>
                         </View>
                         <Text style={styles.statLabel}>Water Saved</Text>
-                        <Text style={styles.statValue}>
-                            12,540 <Text style={styles.statUnit}>L</Text>
-                        </Text>
-                        <Text style={styles.statMonth}>This Month</Text>
-                        <Text style={styles.statChange}>↑ 18% vs last month</Text>
+                        <TouchableOpacity
+                            style={styles.card}
+                            activeOpacity={0.85}
+                            onPress={() => router.push("/Dashboard/graph" as any)}
+                        >
+                            <Text style={styles.statValue}>
+                                12,540 <Text style={styles.statUnit}>L</Text>
+                            </Text>
+                            <Text style={styles.statMonth}>This Month</Text>
+                            <Text style={styles.statChange}>↑ 18% vs last month</Text>
+                        </TouchableOpacity>
                     </View>
                     <View style={styles.statCard}>
                         <View style={[styles.statIconWrap, styles.statIconGreen]}>
                             <Text style={styles.statIconEmoji}>⚡</Text>
                         </View>
                         <Text style={styles.statLabel}>Power Saved</Text>
-                        <Text style={styles.statValue}>
-                            38.6 <Text style={styles.statUnit}>kWh</Text>
-                        </Text>
-                        <Text style={styles.statMonth}>This Month</Text>
-                        <Text style={styles.statChange}>↑ 22% vs last month</Text>
+                        <TouchableOpacity
+                            style={styles.card}
+                            activeOpacity={0.85}
+                            onPress={() => router.push("/Dashboard/graph" as any)}
+                        >
+                            <Text style={styles.statValue}>
+                                38.6 <Text style={styles.statUnit}>kWh</Text>
+                            </Text>
+                            <Text style={styles.statMonth}>This Month</Text>
+                            <Text style={styles.statChange}>↑ 22% vs last month</Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
 
