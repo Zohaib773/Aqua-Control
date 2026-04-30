@@ -262,21 +262,169 @@ export default function History() {
   );
 }
 
+// const styles = StyleSheet.create({
+//   safe: { flex: 1, backgroundColor: "#EEF4FB" },
+//   header: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     paddingHorizontal: 16,
+//     paddingVertical: 12,
+//     backgroundColor: "#EEF4FB",
+//   },
+//   backArrow: { fontSize: 22, color: "#222", fontWeight: "600", padding: 6 },
+//   headerCenter: { flex: 1, alignItems: "center" },
+//   headerTitle: { fontSize: 20, fontWeight: "800", color: "#111" },
+//   headerSub: { fontSize: 11, color: "#777", marginTop: 2 },
+//   bellBtn: { position: "relative", padding: 6 },
+//   bellIcon: { fontSize: 22 },
+//   bellDot: {
+//     position: "absolute",
+//     top: 6, right: 6,
+//     width: 9, height: 9,
+//     borderRadius: 5,
+//     backgroundColor: "#4CAF50",
+//     borderWidth: 1.5,
+//     borderColor: "#EEF4FB",
+//   },
+
+//   scroll: { flex: 1 },
+//   scrollContent: { paddingHorizontal: 16, paddingTop: 4, paddingBottom: 20 },
+
+//   // Stats
+//   statsRow: { flexDirection: "row", marginBottom: 16, gap: 8 },
+//   statCard: {
+//     flex: 1,
+//     backgroundColor: "white",
+//     borderRadius: 16,
+//     padding: 12,
+//     alignItems: "center",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.07,
+//     shadowRadius: 6,
+//     elevation: 3,
+//   },
+//   statIcon: { fontSize: 20, marginBottom: 4 },
+//   statValue: { fontSize: 18, fontWeight: "800", color: "#1565C0" },
+//   statLabel: { fontSize: 10, fontWeight: "700", color: "#333", textAlign: "center", marginTop: 2 },
+//   statUnit: { fontSize: 9, color: "#999", textAlign: "center" },
+
+//   // Filters
+//   filterScroll: { marginBottom: 16 },
+//   filterContent: { gap: 8, paddingRight: 4 },
+//   filterTab: {
+//     paddingHorizontal: 18,
+//     paddingVertical: 8,
+//     borderRadius: 20,
+//     backgroundColor: "white",
+//     borderWidth: 1.5,
+//     borderColor: "#D0DCF0",
+//   },
+//   filterTabActive: {
+//     backgroundColor: "#1565C0",
+//     borderColor: "#1565C0",
+//   },
+//   filterText: { fontSize: 13, fontWeight: "600", color: "#666" },
+//   filterTextActive: { color: "white" },
+
+//   // Timeline
+//   timeline: { paddingLeft: 4 },
+//   timelineItem: { flexDirection: "row", marginBottom: 14 },
+//   timelineDotCol: { alignItems: "center", width: 20, marginRight: 12, paddingTop: 14 },
+//   timelineDot: {
+//     width: 12, height: 12,
+//     borderRadius: 6,
+//     borderWidth: 2,
+//     borderColor: "white",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 1 },
+//     shadowOpacity: 0.2,
+//     shadowRadius: 2,
+//     elevation: 2,
+//   },
+//   timelineLine: {
+//     flex: 1,
+//     width: 2,
+//     backgroundColor: "#D8E4F0",
+//     marginTop: 4,
+//     minHeight: 20,
+//   },
+//   historyCard: {
+//     flex: 1,
+//     backgroundColor: "white",
+//     borderRadius: 16,
+//     padding: 12,
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.07,
+//     shadowRadius: 6,
+//     elevation: 3,
+//   },
+//   historyCardTop: { flexDirection: "row", alignItems: "flex-start" },
+//   historyIcon: {
+//     width: 40, height: 40,
+//     borderRadius: 20,
+//     alignItems: "center",
+//     justifyContent: "center",
+//     marginRight: 10,
+//   },
+//   historyIconEmoji: { fontSize: 18 },
+//   historyCardBody: { flex: 1 },
+//   historyCardRow: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     justifyContent: "space-between",
+//     marginBottom: 3,
+//   },
+//   historyTitle: { fontSize: 13, fontWeight: "700", color: "#111", flex: 1, marginRight: 6 },
+//   historyTag: {
+//     borderRadius: 10,
+//     paddingHorizontal: 8,
+//     paddingVertical: 2,
+//   },
+//   historyTagText: { fontSize: 10, fontWeight: "700" },
+//   historyDesc: { fontSize: 11, color: "#777", lineHeight: 16, marginBottom: 4 },
+//   historyTime: { fontSize: 10, color: "#AAB4C8", fontWeight: "500" },
+
+//   // Bottom Nav
+//   bottomNav: {
+//     flexDirection: "row",
+//     backgroundColor: "white",
+//     borderTopWidth: 1,
+//     borderTopColor: "#E8EEF4",
+//     paddingBottom: 8,
+//     paddingTop: 6,
+//     elevation: 10,
+//   },
+//   navTab: { flex: 1, alignItems: "center", justifyContent: "center", position: "relative", paddingTop: 4 },
+//   navIcon: { fontSize: 20, color: "#999" },
+//   navIconActive: { color: "#1565C0" },
+//   navLabel: { fontSize: 10, color: "#999", marginTop: 3, fontWeight: "500" },
+//   navLabelActive: { color: "#1565C0", fontWeight: "700" },
+//   navActiveBar: {
+//     position: "absolute", top: 0,
+//     width: 28, height: 3,
+//     backgroundColor: "#1565C0",
+//     borderRadius: 2,
+//   },
+// });
+
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#EEF4FB" },
+  safe: { flex: 1, backgroundColor: "#0a0e1a" }, // Dark background
+  
   header: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: "#EEF4FB",
+    backgroundColor: "#131826", // Dark header
   },
-  backArrow: { fontSize: 22, color: "#222", fontWeight: "600", padding: 6 },
+  backArrow: { fontSize: 22, color: "#e5e7eb", fontWeight: "600", padding: 6 },
   headerCenter: { flex: 1, alignItems: "center" },
-  headerTitle: { fontSize: 20, fontWeight: "800", color: "#111" },
-  headerSub: { fontSize: 11, color: "#777", marginTop: 2 },
+  headerTitle: { fontSize: 20, fontWeight: "800", color: "#ffffff" },
+  headerSub: { fontSize: 11, color: "#9ca3af", marginTop: 2 },
   bellBtn: { position: "relative", padding: 6 },
-  bellIcon: { fontSize: 22 },
+  bellIcon: { fontSize: 22, color: "#e5e7eb" },
   bellDot: {
     position: "absolute",
     top: 6, right: 6,
@@ -284,7 +432,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: "#4CAF50",
     borderWidth: 1.5,
-    borderColor: "#EEF4FB",
+    borderColor: "#131826",
   },
 
   scroll: { flex: 1 },
@@ -294,20 +442,20 @@ const styles = StyleSheet.create({
   statsRow: { flexDirection: "row", marginBottom: 16, gap: 8 },
   statCard: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#1a1f2e", // Dark card
     borderRadius: 16,
     padding: 12,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.07,
+    shadowOpacity: 0.2,
     shadowRadius: 6,
     elevation: 3,
   },
   statIcon: { fontSize: 20, marginBottom: 4 },
-  statValue: { fontSize: 18, fontWeight: "800", color: "#1565C0" },
-  statLabel: { fontSize: 10, fontWeight: "700", color: "#333", textAlign: "center", marginTop: 2 },
-  statUnit: { fontSize: 9, color: "#999", textAlign: "center" },
+  statValue: { fontSize: 18, fontWeight: "800", color: "#4FC3F7" }, // Lighter blue
+  statLabel: { fontSize: 10, fontWeight: "700", color: "#e5e7eb", textAlign: "center", marginTop: 2 },
+  statUnit: { fontSize: 9, color: "#9ca3af", textAlign: "center" },
 
   // Filters
   filterScroll: { marginBottom: 16 },
@@ -316,15 +464,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingVertical: 8,
     borderRadius: 20,
-    backgroundColor: "white",
+    backgroundColor: "#1a1f2e", // Dark filter background
     borderWidth: 1.5,
-    borderColor: "#D0DCF0",
+    borderColor: "#2a2f3e", // Dark border
   },
   filterTabActive: {
-    backgroundColor: "#1565C0",
+    backgroundColor: "#1565C0", // Keep brand blue
     borderColor: "#1565C0",
   },
-  filterText: { fontSize: 13, fontWeight: "600", color: "#666" },
+  filterText: { fontSize: 13, fontWeight: "600", color: "#9ca3af" },
   filterTextActive: { color: "white" },
 
   // Timeline
@@ -335,28 +483,28 @@ const styles = StyleSheet.create({
     width: 12, height: 12,
     borderRadius: 6,
     borderWidth: 2,
-    borderColor: "white",
+    borderColor: "#1a1f2e", // Match card background
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.3,
     shadowRadius: 2,
     elevation: 2,
   },
   timelineLine: {
     flex: 1,
     width: 2,
-    backgroundColor: "#D8E4F0",
+    backgroundColor: "#2a2f3e", // Dark line
     marginTop: 4,
     minHeight: 20,
   },
   historyCard: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#1a1f2e", // Dark card
     borderRadius: 16,
     padding: 12,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.07,
+    shadowOpacity: 0.2,
     shadowRadius: 6,
     elevation: 3,
   },
@@ -376,35 +524,35 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 3,
   },
-  historyTitle: { fontSize: 13, fontWeight: "700", color: "#111", flex: 1, marginRight: 6 },
+  historyTitle: { fontSize: 13, fontWeight: "700", color: "#ffffff", flex: 1, marginRight: 6 },
   historyTag: {
     borderRadius: 10,
     paddingHorizontal: 8,
     paddingVertical: 2,
   },
   historyTagText: { fontSize: 10, fontWeight: "700" },
-  historyDesc: { fontSize: 11, color: "#777", lineHeight: 16, marginBottom: 4 },
-  historyTime: { fontSize: 10, color: "#AAB4C8", fontWeight: "500" },
+  historyDesc: { fontSize: 11, color: "#9ca3af", lineHeight: 16, marginBottom: 4 },
+  historyTime: { fontSize: 10, color: "#6b7280", fontWeight: "500" },
 
   // Bottom Nav
   bottomNav: {
     flexDirection: "row",
-    backgroundColor: "white",
+    backgroundColor: "#131826", // Dark bottom nav
     borderTopWidth: 1,
-    borderTopColor: "#E8EEF4",
+    borderTopColor: "#2a2f3e",
     paddingBottom: 8,
     paddingTop: 6,
     elevation: 10,
   },
   navTab: { flex: 1, alignItems: "center", justifyContent: "center", position: "relative", paddingTop: 4 },
-  navIcon: { fontSize: 20, color: "#999" },
-  navIconActive: { color: "#1565C0" },
-  navLabel: { fontSize: 10, color: "#999", marginTop: 3, fontWeight: "500" },
-  navLabelActive: { color: "#1565C0", fontWeight: "700" },
+  navIcon: { fontSize: 20, color: "#6b7280" },
+  navIconActive: { color: "#4FC3F7" },
+  navLabel: { fontSize: 10, color: "#6b7280", marginTop: 3, fontWeight: "500" },
+  navLabelActive: { color: "#4FC3F7", fontWeight: "700" },
   navActiveBar: {
     position: "absolute", top: 0,
     width: 28, height: 3,
-    backgroundColor: "#1565C0",
+    backgroundColor: "#4FC3F7",
     borderRadius: 2,
   },
 });

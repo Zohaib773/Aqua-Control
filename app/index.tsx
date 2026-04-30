@@ -180,10 +180,11 @@ export default function Index() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#d6eaf8",
+    backgroundColor: "#0a0e1a", // Dark background
   },
   heroSection: {
     height: height * 0.52,
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
   },
   skyBackground: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "#c8dff5",
+    backgroundColor: "#0f1420", // Dark sky
   },
   logoContainer: {
     alignItems: "center",
@@ -210,8 +211,8 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     letterSpacing: 1,
   },
-  brandBlue: { color: "#1565C0" },
-  brandGreen: { color: "#2E7D32" },
+  brandBlue: { color: "#4FC3F7" }, // Lighter blue for dark mode
+  brandGreen: { color: "#81C784" }, // Lighter green for dark mode
   taglineRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -220,11 +221,11 @@ const styles = StyleSheet.create({
   taglineLine: {
     height: 1,
     width: 30,
-    backgroundColor: "#666",
+    backgroundColor: "#666", // Keep as is or make lighter
   },
   tagline: {
     fontSize: 13,
-    color: "#444",
+    color: "#aaa", // Lighter gray for dark mode
     fontWeight: "500",
   },
   taglineLeaf: {
@@ -243,12 +244,12 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: "rgba(255,255,255,0.9)",
+    backgroundColor: "rgba(30, 35, 48, 0.95)", // Dark semi-transparent
     alignItems: "center",
     justifyContent: "center",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.3,
     shadowRadius: 4,
     elevation: 4,
   },
@@ -267,14 +268,14 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: "hidden",
     borderWidth: 2,
-    borderColor: "#aaa",
+    borderColor: "#2a3e5c", // Darker border
   },
-  tankTop: { height: 10, backgroundColor: "#e0e0e0" },
-  tankBodyWhite: { height: 20, backgroundColor: "#f5f5f5" },
-  tankWaterLight: { height: 20, backgroundColor: "#90CAF9" },
-  tankWaterMid: { height: 35, backgroundColor: "#1E88E5" },
-  tankWaterDark: { height: 35, backgroundColor: "#1565C0" },
-  tankBottom: { height: 10, backgroundColor: "#0D47A1" },
+  tankTop: { height: 10, backgroundColor: "#2a2f3e" },
+  tankBodyWhite: { height: 20, backgroundColor: "#1e2333" },
+  tankWaterLight: { height: 20, backgroundColor: "#1e4a6e" },
+  tankWaterMid: { height: 35, backgroundColor: "#0d3b5e" },
+  tankWaterDark: { height: 35, backgroundColor: "#072c48" },
+  tankBottom: { height: 10, backgroundColor: "#041e33" },
   tankStand: {
     flexDirection: "row",
     justifyContent: "space-around",
@@ -285,7 +286,7 @@ const styles = StyleSheet.create({
   standLeg: {
     width: 8,
     height: 30,
-    backgroundColor: "#90A4AE",
+    backgroundColor: "#4a5568", // Darker gray
   },
   pump: {
     flexDirection: "row",
@@ -295,14 +296,14 @@ const styles = StyleSheet.create({
   pumpBody: {
     width: 30,
     height: 20,
-    backgroundColor: "#1565C0",
+    backgroundColor: "#0d3b5e",
     borderRadius: 4,
   },
   pumpMotor: {
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: "#1E88E5",
+    backgroundColor: "#1e4a6e",
     marginLeft: 4,
   },
   controllerBox: {
@@ -311,15 +312,15 @@ const styles = StyleSheet.create({
     top: 20,
     width: 52,
     height: 64,
-    backgroundColor: "white",
+    backgroundColor: "#1a1f2e", // Dark card
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#ddd",
+    borderColor: "#2a2f3e", // Dark border
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.3,
     shadowRadius: 3,
     elevation: 3,
   },
@@ -333,13 +334,13 @@ const styles = StyleSheet.create({
     right: 8,
   },
   controllerDrop: { fontSize: 18 },
-  controllerWifi: { fontSize: 10, marginTop: 2 },
+  controllerWifi: { fontSize: 10, marginTop: 2, color: "#aaa" },
   cardWrapper: {
     flex: 1,
   },
   card: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#131826", // Dark card background
     borderTopLeftRadius: 32,
     borderTopRightRadius: 32,
     paddingHorizontal: 24,
@@ -347,7 +348,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: -4 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.2,
     shadowRadius: 12,
     elevation: 8,
   },
@@ -355,12 +356,12 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "700",
     textAlign: "center",
-    color: "#111",
+    color: "#ffffff", // White text for dark mode
     marginBottom: 6,
   },
   welcomeSubtitle: {
     fontSize: 13,
-    color: "#777",
+    color: "#9ca3af", // Light gray for dark mode
     textAlign: "center",
     marginBottom: 20,
     lineHeight: 18,
@@ -369,35 +370,37 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1.5,
-    borderColor: "#E0E0E0",
+    borderColor: "#2a2f3e", // Dark border
     borderRadius: 12,
     paddingHorizontal: 14,
     paddingVertical: 13,
     marginBottom: 14,
-    backgroundColor: "#FAFAFA",
+    backgroundColor: "#1a1f2e", // Dark input background
   },
   inputIcon: {
     fontSize: 16,
     marginRight: 10,
+    color: "#9ca3af", // Icon color
   },
   input: {
     flex: 1,
     fontSize: 15,
-    color: "#222",
+    color: "#ffffff", // White text
   },
   eyeIcon: {
     fontSize: 16,
     paddingLeft: 8,
+    color: "#9ca3af",
   },
   loginButton: {
-    backgroundColor: "#1565C0",
+    backgroundColor: "#1565C0", // Keep the brand blue
     borderRadius: 14,
     paddingVertical: 16,
     alignItems: "center",
     marginBottom: 12,
     shadowColor: "#1565C0",
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.4,
     shadowRadius: 8,
     elevation: 6,
   },
@@ -409,7 +412,7 @@ const styles = StyleSheet.create({
   },
   signUpButton: {
     borderWidth: 2,
-    borderColor: "#1565C0",
+    borderColor: "#4FC3F7", // Lighter blue border for dark mode
     borderRadius: 14,
     paddingVertical: 14,
     alignItems: "center",
@@ -417,13 +420,13 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
   },
   signUpButtonText: {
-    color: "#1565C0",
+    color: "#4FC3F7", // Lighter blue for dark mode
     fontSize: 17,
     fontWeight: "700",
     letterSpacing: 0.5,
   },
   forgotPassword: {
-    color: "#1565C0",
+    color: "#4FC3F7", // Lighter blue for dark mode
     fontSize: 14,
     textAlign: "center",
     fontWeight: "500",
@@ -437,11 +440,11 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     height: 1,
-    backgroundColor: "#E0E0E0",
+    backgroundColor: "#2a2f3e", // Dark divider
   },
   orText: {
     marginHorizontal: 12,
-    color: "#999",
+    color: "#6b7280", // Medium gray
     fontSize: 13,
   },
   guestRow: {
@@ -452,10 +455,290 @@ const styles = StyleSheet.create({
   guestIcon: {
     fontSize: 16,
     marginRight: 6,
+    color: "#4FC3F7",
   },
   guestText: {
-    color: "#1565C0",
+    color: "#4FC3F7", // Lighter blue for dark mode
     fontSize: 14,
     fontWeight: "600",
   },
 });
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#d6eaf8",
+//   },
+//   heroSection: {
+//     height: height * 0.52,
+//     position: "relative",
+//     overflow: "hidden",
+//   },
+//   skyBackground: {
+//     ...StyleSheet.absoluteFillObject,
+//     backgroundColor: "#c8dff5",
+//   },
+//   logoContainer: {
+//     alignItems: "center",
+//     paddingTop: 50,
+//     zIndex: 10,
+//   },
+//   logoIcon: {
+//     flexDirection: "row",
+//     marginBottom: 4,
+//   },
+//   dropEmoji: { fontSize: 28 },
+//   leafEmoji: { fontSize: 16, marginTop: 4 },
+//   brandName: {
+//     fontSize: 38,
+//     fontWeight: "800",
+//     letterSpacing: 1,
+//   },
+//   brandBlue: { color: "#1565C0" },
+//   brandGreen: { color: "#2E7D32" },
+//   taglineRow: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     marginTop: 4,
+//   },
+//   taglineLine: {
+//     height: 1,
+//     width: 30,
+//     backgroundColor: "#666",
+//   },
+//   tagline: {
+//     fontSize: 13,
+//     color: "#444",
+//     fontWeight: "500",
+//   },
+//   taglineLeaf: {
+//     fontSize: 14,
+//     marginTop: 2,
+//   },
+//   tankArea: {
+//     flex: 1,
+//     alignItems: "center",
+//     justifyContent: "center",
+//     position: "relative",
+//     marginTop: 10,
+//   },
+//   floatingIcon: {
+//     position: "absolute",
+//     width: 44,
+//     height: 44,
+//     borderRadius: 22,
+//     backgroundColor: "rgba(255,255,255,0.9)",
+//     alignItems: "center",
+//     justifyContent: "center",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.15,
+//     shadowRadius: 4,
+//     elevation: 4,
+//   },
+//   floatingIconText: { fontSize: 18 },
+//   floatingIconTopLeft: { left: 60, top: 10 },
+//   floatingIconTopRight: { right: 60, top: 0 },
+//   floatingIconMidRight: { right: 40, top: 60 },
+//   floatingIconBottomRight: { right: 55, bottom: 20 },
+//   tankContainer: {
+//     alignItems: "center",
+//     position: "relative",
+//   },
+//   tank: {
+//     width: 110,
+//     height: 130,
+//     borderRadius: 12,
+//     overflow: "hidden",
+//     borderWidth: 2,
+//     borderColor: "#aaa",
+//   },
+//   tankTop: { height: 10, backgroundColor: "#e0e0e0" },
+//   tankBodyWhite: { height: 20, backgroundColor: "#f5f5f5" },
+//   tankWaterLight: { height: 20, backgroundColor: "#90CAF9" },
+//   tankWaterMid: { height: 35, backgroundColor: "#1E88E5" },
+//   tankWaterDark: { height: 35, backgroundColor: "#1565C0" },
+//   tankBottom: { height: 10, backgroundColor: "#0D47A1" },
+//   tankStand: {
+//     flexDirection: "row",
+//     justifyContent: "space-around",
+//     width: 100,
+//     height: 30,
+//     marginTop: 0,
+//   },
+//   standLeg: {
+//     width: 8,
+//     height: 30,
+//     backgroundColor: "#90A4AE",
+//   },
+//   pump: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     marginTop: 4,
+//   },
+//   pumpBody: {
+//     width: 30,
+//     height: 20,
+//     backgroundColor: "#1565C0",
+//     borderRadius: 4,
+//   },
+//   pumpMotor: {
+//     width: 24,
+//     height: 24,
+//     borderRadius: 12,
+//     backgroundColor: "#1E88E5",
+//     marginLeft: 4,
+//   },
+//   controllerBox: {
+//     position: "absolute",
+//     left: -70,
+//     top: 20,
+//     width: 52,
+//     height: 64,
+//     backgroundColor: "white",
+//     borderRadius: 8,
+//     alignItems: "center",
+//     justifyContent: "center",
+//     borderWidth: 1,
+//     borderColor: "#ddd",
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: 2 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 3,
+//     elevation: 3,
+//   },
+//   controllerDot: {
+//     width: 8,
+//     height: 8,
+//     borderRadius: 4,
+//     backgroundColor: "#4CAF50",
+//     position: "absolute",
+//     top: 8,
+//     right: 8,
+//   },
+//   controllerDrop: { fontSize: 18 },
+//   controllerWifi: { fontSize: 10, marginTop: 2 },
+//   cardWrapper: {
+//     flex: 1,
+//   },
+//   card: {
+//     flex: 1,
+//     backgroundColor: "white",
+//     borderTopLeftRadius: 32,
+//     borderTopRightRadius: 32,
+//     paddingHorizontal: 24,
+//     paddingTop: 28,
+//     paddingBottom: 16,
+//     shadowColor: "#000",
+//     shadowOffset: { width: 0, height: -4 },
+//     shadowOpacity: 0.08,
+//     shadowRadius: 12,
+//     elevation: 8,
+//   },
+//   welcomeTitle: {
+//     fontSize: 28,
+//     fontWeight: "700",
+//     textAlign: "center",
+//     color: "#111",
+//     marginBottom: 6,
+//   },
+//   welcomeSubtitle: {
+//     fontSize: 13,
+//     color: "#777",
+//     textAlign: "center",
+//     marginBottom: 20,
+//     lineHeight: 18,
+//   },
+//   inputContainer: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     borderWidth: 1.5,
+//     borderColor: "#E0E0E0",
+//     borderRadius: 12,
+//     paddingHorizontal: 14,
+//     paddingVertical: 13,
+//     marginBottom: 14,
+//     backgroundColor: "#FAFAFA",
+//   },
+//   inputIcon: {
+//     fontSize: 16,
+//     marginRight: 10,
+//   },
+//   input: {
+//     flex: 1,
+//     fontSize: 15,
+//     color: "#222",
+//   },
+//   eyeIcon: {
+//     fontSize: 16,
+//     paddingLeft: 8,
+//   },
+//   loginButton: {
+//     backgroundColor: "#1565C0",
+//     borderRadius: 14,
+//     paddingVertical: 16,
+//     alignItems: "center",
+//     marginBottom: 12,
+//     shadowColor: "#1565C0",
+//     shadowOffset: { width: 0, height: 4 },
+//     shadowOpacity: 0.3,
+//     shadowRadius: 8,
+//     elevation: 6,
+//   },
+//   loginButtonText: {
+//     color: "white",
+//     fontSize: 17,
+//     fontWeight: "700",
+//     letterSpacing: 0.5,
+//   },
+//   signUpButton: {
+//     borderWidth: 2,
+//     borderColor: "#1565C0",
+//     borderRadius: 14,
+//     paddingVertical: 14,
+//     alignItems: "center",
+//     marginBottom: 14,
+//     backgroundColor: "transparent",
+//   },
+//   signUpButtonText: {
+//     color: "#1565C0",
+//     fontSize: 17,
+//     fontWeight: "700",
+//     letterSpacing: 0.5,
+//   },
+//   forgotPassword: {
+//     color: "#1565C0",
+//     fontSize: 14,
+//     textAlign: "center",
+//     fontWeight: "500",
+//     marginBottom: 14,
+//   },
+//   dividerRow: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     marginBottom: 14,
+//   },
+//   divider: {
+//     flex: 1,
+//     height: 1,
+//     backgroundColor: "#E0E0E0",
+//   },
+//   orText: {
+//     marginHorizontal: 12,
+//     color: "#999",
+//     fontSize: 13,
+//   },
+//   guestRow: {
+//     flexDirection: "row",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+//   guestIcon: {
+//     fontSize: 16,
+//     marginRight: 6,
+//   },
+//   guestText: {
+//     color: "#1565C0",
+//     fontSize: 14,
+//     fontWeight: "600",
+//   },
+// });
